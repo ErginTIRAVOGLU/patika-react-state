@@ -1,5 +1,6 @@
 import {  useState } from "react";
 import Counter from "./Components/Counter";
+import InputExample from "./Components/InputExample";
 
 function App() {
   const [name, setName] = useState("Mehmet");
@@ -8,6 +9,7 @@ function App() {
   const [address, setAddress] = useState({title:"Istanbul", zip:34000});
   return (
     <div className="App">
+      <InputExample/>
         <Counter/>
       <h1>Merhaba {name}</h1>
       <h2>{age}</h2>
