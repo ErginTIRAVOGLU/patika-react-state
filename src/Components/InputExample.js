@@ -18,10 +18,10 @@ function InputExample() {
         <input type='text' value={surName} onChange={(event) => setSurName(event.target.value)}></input>
         <br />
         <br />
-        <label for="name">Name : </label>
+        <label htmlFor="name">Name : </label>
         <input type='text' name="name" value={form.name} onChange={onChangeInput}></input>
         <br />
-        <label for="name">Surname : </label>
+        <label htmlFor="name">Surname : </label>
         <input type='text' name="surName" value={form.surName} onChange={onChangeInput}></input>
 
         <p>{form.name}</p>

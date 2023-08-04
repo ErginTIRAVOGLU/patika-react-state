@@ -1,14 +1,23 @@
 import {  useState } from "react";
 import Counter from "./Components/Counter";
 import InputExample from "./Components/InputExample";
+import UseEffectTest from "./Components/UseEffectTest";
 
 function App() {
   const [name, setName] = useState("Mehmet");
   const [age, setAge] = useState(29);
   const [friends, setFriends] = useState(["Ahmet", "Mehmet", "Murat"]);
   const [address, setAddress] = useState({title:"Istanbul", zip:34000});
+  const [isVisible, setIsVisible] = useState(true);
   return (
     <div className="App">
+      {isVisible && <UseEffectTest />}
+      <br />
+      <br />
+      <button onClick={() => setIsVisible(!isVisible)}>Toogle Visible</button>
+      <br />
+      <br />
+
       <InputExample/>
         <Counter/>
       <h1>Merhaba {name}</h1>
